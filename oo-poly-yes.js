@@ -19,6 +19,7 @@ box3 = {
   }
 }
 
-box1.open();
-box2.open();
-box3.open();
+arr = [box1, box2, box3];
+arr.forEach(function(i){
+  i.open();
+})
