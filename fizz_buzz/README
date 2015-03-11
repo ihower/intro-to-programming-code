@@ -1,0 +1,2 @@
+npm install jasmine-node -g
+jasmine-node spec
