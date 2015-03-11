@@ -37,12 +37,23 @@ let someHouse = House()
 
 var vehicles1: [Vehicle] = [someVehicle, someCar]
 
+func vehicleMakeNoise(v: Vehicle) {
+  v.makeNoise()
+}
+
 for item in vehicles1 {
-    item.makeNoise()
+  //item.makeNoise()
+  vehicleMakeNoise(item)
 }
 
 var ownership_items: [OwnershipProtocol] = [someCar, someHouse]
 
+func itemShowOwner(o: OwnershipProtocol) {
+  o.show_owner()
+}
+
+
 for item in ownership_items {
-  item.show_owner()
+  //item.show_owner()
+  itemShowOwner(item)
 }
