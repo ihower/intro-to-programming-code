@@ -11,12 +11,12 @@ console.log("after x: " + x);
 console.log("----------")
 
 function bar(obj) {
-  obj.x = 9999;
+  obj[0] = 9999;
 }
 
-var obj = { x: 1 };
+var obj = [1,2,3];
 
-console.log("before obj.x: " + obj.x);
+console.log("before obj: " + obj);
 
 bar(obj);
-console.log("after obj.x: " + obj.x);
+console.log("after obj: " + obj);
