@@ -23,6 +23,7 @@ function open(box) {
   }
 }
 
-open(box1);
-open(box2);
-open(box3);
+arr = [box1, box2, box3];
+arr.forEach(function(i){
+  open(i);
+})
