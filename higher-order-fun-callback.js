@@ -1,22 +1,30 @@
 // library code
-ajax = {
-  get: function() {
-    console.log("Sent request");
-    var that = this;
+request_worker = {
+  get: function(options) {
+    console.log("Sent request.... (wait)");
+
     setTimeout( function(){
-      console.log("Get response")
-      that.success();
+      console.log("Got response: " + options.data.type)
+      options.success();
     }, 3000)
-  },
-  success: function(){}
+  }
 }
 
 // your app code
 
-ajax.get();
-ajax.success = function() {
-  console.log("Handle successful!");
-}
+request_worker.get({
+  data: { type: "html" },
+  success: function() {
+    console.log("Handle successful!");
+  }
+});
+
+request_worker.get({
+  data: { type: "json" },
+  success: function() {
+    console.log("Handle successful!");
+  }
+});
 
 console.log("Do another job...")
 console.log("Do another job...")
