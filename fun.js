@@ -8,3 +8,6 @@ var bar = function(x) {
 }
 
 bar(foo)
+bar( function() {
+  console.log("Q____Q")
+} )
