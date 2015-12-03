@@ -19,13 +19,6 @@ request_worker.get({
   }
 });
 
-request_worker.get({
-  data: { type: "json" },
-  success: function() {
-    console.log("Handle successful!");
-  }
-});
-
 console.log("Do another job...")
 console.log("Do another job...")
 console.log("Do another job...")
