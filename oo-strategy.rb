@@ -1,49 +1,38 @@
-class MyFormatter
+# Strategy Pattern
+
+class AwesomeFormatter
 
   attr_accessor :data, :formatter
 
-  def initialize(data, formatter = XMLFormatter.new )
+  def initialize(data, formatter)
     self.data = data
     self.formatter = formatter
   end
 
   def output
-    formatter.output(data)
+    puts self.formatter.output( self.data )
   end
+
 end
 
 class XMLFormatter
   def output(data)
-    puts "<data>" + data + "</data>"
+    "<data>#{data}</data>"
   end
 end
 
 class JSONFormatter
   def output(data)
-    puts "{ data: " + data + "}"
+    "{ data: #{data} }"
   end
 end
 
 
-f1 = MyFormatter.new( "ihower" )
-f2 = MyFormatter.new( "peterpan", JSONFormatter.new)
 
-json_formatter = JSONFormatter.new
+formatter = AwesomeFormatter.new( "ihower", XMLFormatter.new )
 
-f1.formatter = json_formatter
-f1.output()
+formatter.output()
 
-f1.formatter = XMLFormatter.new
+formatter.formatter = JSONFormatter.new
 
-f1.output()
-
-
-f2.formatter =json_formatter
-
-f2.output()
-
-
-
-
-
-
+formatter.output()

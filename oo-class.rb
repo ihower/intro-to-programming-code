@@ -1,32 +1,17 @@
 class Vehicle
 
+  def initialize(name)
+    @name = name
+  end
+
   def move
-    puts "move"
+    puts @name + " is moving"
   end
 
 end
 
-class Car < Vehicle
+object1 = Vehicle.new("ihower")
+object2 = Vehicle.new("bernard")
 
-  def foo
-    puts "foo cat"
-  end
-
-end
-
-class Bike < Vehicle
-
-  def foo
-    puts "foo bike"
-  end
-
-end
-
-car = Car.new
-bike = Bike.new
-
-car.move()
-bike.move()
-
-car.foo()
-bike.foo()
+object1.move()
+object2.move()
