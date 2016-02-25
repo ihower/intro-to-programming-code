@@ -1,5 +1,6 @@
 function foo(a) {
   a = 9999;
+  return a;
 }
 
 var x = 1;
@@ -7,6 +8,9 @@ console.log("before x: " + x);
 
 foo(x);
 console.log("after x: " + x);
+
+x = foo(x);
+console.log("after assign x: " + x);
 
 console.log("----------")
 
