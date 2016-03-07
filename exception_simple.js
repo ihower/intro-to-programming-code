@@ -10,3 +10,5 @@ try {
   console.log(e.msg);
   console.log(e.code);
 }
+
+console.log("Done")
