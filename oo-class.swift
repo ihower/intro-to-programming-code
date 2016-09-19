@@ -10,7 +10,7 @@ class Vehicle {
     }
 }
 
-var object = Vehicle("ihower")
+var object = Vehicle(name: "ihower")
 
 
 let object1 = Vehicle(name: "ihower")
